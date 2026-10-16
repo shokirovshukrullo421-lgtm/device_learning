@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f4f6f8; color: #222; }
+header { background: #1f2937; color: #fff; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+header .right { display: flex; gap: 16px; align-items: center; }
+main { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 16px; }
+.auth { max-width: 360px; margin: 80px auto; }
+h2, h3 { margin-top: 0; }
+input { width: 100%; padding: 10px; margin: 6px 0 12px; border: 1px solid #ccc; border-radius: 6px; }
+button { padding: 9px 16px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+button:hover { background: #1d4ed8; }
+button.danger { background: #dc2626; }
+button.gray { background: #6b7280; }
+.row { display: flex; gap: 8px; }
+.row button { flex: 1; }
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tabs button { background: #e5e7eb; color: #222; }
+.tabs button.active { background: #2563eb; color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.product { background: #fff; padding: 16px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.product .price { color: #059669; font-weight: bold; margin: 6px 0; }
+.product input { width: 70px; margin: 0 8px 0 0; padding: 6px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #e5e7eb; }
+.msg { margin-top: 10px; font-size: 14px; }
+.msg.err { color: #dc2626; }
+.msg.ok { color: #059669; }
+.hidden { display: none; }

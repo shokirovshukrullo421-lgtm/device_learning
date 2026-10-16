@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do'kon — Admin</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <b>Admin panel</b>
+    <div class="right">
+      <span id="uname"></span>
+      <button class="gray" onclick="Auth.logout()">Chiqish</button>
+    </div>
+  </header>
+  <main>
+    <div class="tabs">
+      <button data-tab="products" class="active">Mahsulotlar</button>
+      <button data-tab="users">Userlar</button>
+      <button data-tab="orders">Xaridlar</button>
+    </div>
+
+    <section id="products">
+      <div class="card">
+        <h3>Yangi mahsulot</h3>
+        <input id="pName" placeholder="Nomi">
+        <input id="pDesc" placeholder="Tavsif">
+        <input id="pPrice" type="number" min="0" placeholder="Narxi">
+        <input id="pStock" type="number" min="0" placeholder="Ombordagi soni">
+        <button id="addProduct">Qo'shish</button>
+        <div id="pMsg" class="msg"></div>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>ID</th><th>Nomi</th><th>Narx</th><th>Soni</th><th></th></tr></thead>
+          <tbody id="productBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="users" class="hidden card">
+      <h3>Userlar</h3>
+      <table>
+        <thead><tr><th>ID</th><th>Login</th><th>Rol</th><th>Balans</th><th>Ro'yxatdan o'tgan</th></tr></thead>
+        <tbody id="userBody"></tbody>
+      </table>
+    </section>
+
+    <section id="orders" class="hidden card">
+      <h3>Barcha xaridlar</h3>
+      <table>
+        <thead><tr><th>#</th><th>User</th><th>Sana</th><th>Mahsulotlar</th><th>Jami</th></tr></thead>
+        <tbody id="orderBody"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

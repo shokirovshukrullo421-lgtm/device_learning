@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do'kon — User</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <b>Do'kon</b>
+    <div class="right">
+      <span id="uname"></span>
+      <span>Balans: <b id="balance">0</b></span>
+      <button class="gray" onclick="Auth.logout()">Chiqish</button>
+    </div>
+  </header>
+  <main>
+    <div class="tabs">
+      <button data-tab="products" class="active">Mahsulotlar</button>
+      <button data-tab="cart">Savat</button>
+      <button data-tab="balanceTab">Balans</button>
+      <button data-tab="orders">Xaridlarim</button>
+    </div>
+
+    <section id="products"><div class="grid" id="productList"></div></section>
+
+    <section id="cart" class="hidden card">
+      <h3>Savat</h3>
+      <table>
+        <thead><tr><th>Mahsulot</th><th>Narx</th><th>Soni</th><th>Jami</th><th></th></tr></thead>
+        <tbody id="cartBody"></tbody>
+      </table>
+      <p>Umumiy: <b id="cartTotal">0</b></p>
+      <button id="payBtn">To'lov qilish</button>
+      <div id="cartMsg" class="msg"></div>
+    </section>
+
+    <section id="balanceTab" class="hidden card">
+      <h3>Balansni to'ldirish</h3>
+      <input id="amount" type="number" min="1" placeholder="Summa">
+      <button id="topupBtn">To'ldirish</button>
+      <div id="balMsg" class="msg"></div>
+    </section>
+
+    <section id="orders" class="hidden card">
+      <h3>Xaridlarim</h3>
+      <table>
+        <thead><tr><th>#</th><th>Sana</th><th>Mahsulotlar</th><th>Jami</th></tr></thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/user.js"></script>
+</body>
+</html>
